@@ -26,6 +26,7 @@
     <MetadataFile FileName="BankService.disco" MetadataType="Disco" ID="9cf5328e-6a1f-445b-a022-f9e371d72e74" SourceId="1" SourceUrl="http://localhost:59723/BankService.svc?disco" />
     <MetadataFile FileName="BankService.xsd" MetadataType="Schema" ID="1122f250-5762-4c67-a727-2bcf62ea0056" SourceId="1" SourceUrl="http://localhost:59723/BankService.svc?xsd=xsd1" />
     <MetadataFile FileName="BankService1.xsd" MetadataType="Schema" ID="e9b70257-093b-4c8d-b3d5-255c28aae373" SourceId="1" SourceUrl="http://localhost:59723/BankService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BankService2.xsd" MetadataType="Schema" ID="e203b104-60d9-4a7e-bdeb-5c6ea3bcd2e5" SourceId="1" SourceUrl="http://localhost:59723/BankService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

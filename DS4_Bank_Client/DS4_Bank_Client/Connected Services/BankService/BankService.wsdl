@@ -4,8 +4,21 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:59723/BankService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:59723/BankService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59723/BankService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IBankService_SelectAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAccount" />
+  </wsdl:message>
+  <wsdl:message name="IBankService_SelectAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBankService_ShowLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowLog" />
+  </wsdl:message>
+  <wsdl:message name="IBankService_ShowLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowLogResponse" />
+  </wsdl:message>
   <wsdl:message name="IBankService_UpdateBalance_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateBalance" />
   </wsdl:message>
@@ -25,6 +38,14 @@
     <wsdl:part name="parameters" element="tns:ShowInDinarsResponse" />
   </wsdl:message>
   <wsdl:portType name="IBankService">
+    <wsdl:operation name="SelectAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankService/SelectAccount" message="tns:IBankService_SelectAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankService/SelectAccountResponse" message="tns:IBankService_SelectAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBankService/ShowLog" message="tns:IBankService_ShowLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBankService/ShowLogResponse" message="tns:IBankService_ShowLog_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateBalance">
       <wsdl:input wsaw:Action="http://tempuri.org/IBankService/UpdateBalance" message="tns:IBankService_UpdateBalance_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBankService/UpdateBalanceResponse" message="tns:IBankService_UpdateBalance_OutputMessage" />
@@ -40,6 +61,24 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IBankService" type="tns:IBankService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectAccount">
+      <soap:operation soapAction="http://tempuri.org/IBankService/SelectAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowLog">
+      <soap:operation soapAction="http://tempuri.org/IBankService/ShowLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateBalance">
       <soap:operation soapAction="http://tempuri.org/IBankService/UpdateBalance" style="document" />
       <wsdl:input>

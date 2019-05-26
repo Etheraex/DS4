@@ -13,10 +13,16 @@ namespace DS4_Bank
     public interface IBankService
     {
         [OperationContract]
+        void SelectAccount(int i);
+
+        [OperationContract]
+        List<string> ShowLog();
+
+        [OperationContract]
         void UpdateBalance(double d, string name, double coef);
 
         [OperationContract]
-        void Withdraw(double d);
+        bool Withdraw(double d);
 
         [OperationContract]
         double ShowInDinars();

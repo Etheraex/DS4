@@ -8,17 +8,43 @@ namespace DS4_Bank
 {
     public class Bank
     {
-        private AccountData _account;
+        private List<AccountData> _accounts;
+        private List<string> _log;
         private static object obj = new object();
+        private int _selected = 0;
 
         private Bank()
         {
-            _account = new AccountData();
+            _accounts = new List<AccountData>();
+            // 5 naloga samo za simulaciju
+            // trebalo bi da postoji nacin za kreiranje naloga i brisanje ali nope
+            _accounts.Add(new AccountData());
+            _accounts.Add(new AccountData());
+            _accounts.Add(new AccountData());
+            _accounts.Add(new AccountData());
+            _accounts.Add(new AccountData());
+
+            _log = new List<string>();
+        }
+
+        public void SelectAccount(int i)
+        {
+            _selected = i;
         }
 
         public AccountData GetAccount()
         {
-            return _account;
+            return _accounts[_selected];
+        }
+
+        public void LogMessage(string message)
+        {
+            _log.Add(message + " nad nalogom: " + _selected.ToString());
+        }
+
+        public List<string> GetLog()
+        {
+            return _log;
         }
 
         public static Bank _instance;

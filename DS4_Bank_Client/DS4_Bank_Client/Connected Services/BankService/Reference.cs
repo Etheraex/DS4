@@ -15,6 +15,18 @@ namespace DS4_Bank_Client.BankService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BankService.IBankService")]
     public interface IBankService {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankService/SelectAccount", ReplyAction="http://tempuri.org/IBankService/SelectAccountResponse")]
+        void SelectAccount(int i);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankService/SelectAccount", ReplyAction="http://tempuri.org/IBankService/SelectAccountResponse")]
+        System.Threading.Tasks.Task SelectAccountAsync(int i);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankService/ShowLog", ReplyAction="http://tempuri.org/IBankService/ShowLogResponse")]
+        string[] ShowLog();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankService/ShowLog", ReplyAction="http://tempuri.org/IBankService/ShowLogResponse")]
+        System.Threading.Tasks.Task<string[]> ShowLogAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankService/UpdateBalance", ReplyAction="http://tempuri.org/IBankService/UpdateBalanceResponse")]
         void UpdateBalance(double d, string name, double coef);
         
@@ -22,10 +34,10 @@ namespace DS4_Bank_Client.BankService {
         System.Threading.Tasks.Task UpdateBalanceAsync(double d, string name, double coef);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankService/Withdraw", ReplyAction="http://tempuri.org/IBankService/WithdrawResponse")]
-        void Withdraw(double d);
+        bool Withdraw(double d);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankService/Withdraw", ReplyAction="http://tempuri.org/IBankService/WithdrawResponse")]
-        System.Threading.Tasks.Task WithdrawAsync(double d);
+        System.Threading.Tasks.Task<bool> WithdrawAsync(double d);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBankService/ShowInDinars", ReplyAction="http://tempuri.org/IBankService/ShowInDinarsResponse")]
         double ShowInDinars();
@@ -61,6 +73,22 @@ namespace DS4_Bank_Client.BankService {
                 base(binding, remoteAddress) {
         }
         
+        public void SelectAccount(int i) {
+            base.Channel.SelectAccount(i);
+        }
+        
+        public System.Threading.Tasks.Task SelectAccountAsync(int i) {
+            return base.Channel.SelectAccountAsync(i);
+        }
+        
+        public string[] ShowLog() {
+            return base.Channel.ShowLog();
+        }
+        
+        public System.Threading.Tasks.Task<string[]> ShowLogAsync() {
+            return base.Channel.ShowLogAsync();
+        }
+        
         public void UpdateBalance(double d, string name, double coef) {
             base.Channel.UpdateBalance(d, name, coef);
         }
@@ -69,11 +97,11 @@ namespace DS4_Bank_Client.BankService {
             return base.Channel.UpdateBalanceAsync(d, name, coef);
         }
         
-        public void Withdraw(double d) {
-            base.Channel.Withdraw(d);
+        public bool Withdraw(double d) {
+            return base.Channel.Withdraw(d);
         }
         
-        public System.Threading.Tasks.Task WithdrawAsync(double d) {
+        public System.Threading.Tasks.Task<bool> WithdrawAsync(double d) {
             return base.Channel.WithdrawAsync(d);
         }
         

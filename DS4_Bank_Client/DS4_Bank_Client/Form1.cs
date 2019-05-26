@@ -32,7 +32,23 @@ namespace DS4_Bank_Client
         private void button3_Click(object sender, EventArgs e)
         {
             BankService.BankServiceClient client = new BankService.BankServiceClient();
-            client.Withdraw(Double.Parse(textBox4.Text));
+            if (!client.Withdraw(Double.Parse(textBox4.Text)))
+                MessageBox.Show("Nemate dovoljno novca na racunu!");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            BankService.BankServiceClient client = new BankService.BankServiceClient();
+            client.SelectAccount(Int32.Parse(textBox5.Text));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            BankService.BankServiceClient client = new BankService.BankServiceClient();
+            var tmp = client.ShowLog();
+            foreach (string s in tmp)
+                richTextBox1.AppendText(s +"\n");
+            richTextBox1.AppendText("###################################");
         }
     }
 }
