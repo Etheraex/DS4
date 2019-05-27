@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="64f85592-e2ad-42a2-b32d-4bdfdbad5190" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49206/RegistracijaServis.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RegistracijaServis.xsd" MetadataType="Schema" ID="e496e646-c367-4827-a047-b4e20c8e8ac5" SourceId="1" SourceUrl="http://localhost:49206/RegistracijaServis.svc?xsd=xsd3" />
+    <MetadataFile FileName="RegistracijaServis1.xsd" MetadataType="Schema" ID="3162067d-28be-439d-a9a0-a44f76b5f91e" SourceId="1" SourceUrl="http://localhost:49206/RegistracijaServis.svc?xsd=xsd2" />
+    <MetadataFile FileName="RegistracijaServis2.xsd" MetadataType="Schema" ID="07fb0d81-23e5-4e8b-b5d9-3973ea7106c3" SourceId="1" SourceUrl="http://localhost:49206/RegistracijaServis.svc?xsd=xsd1" />
+    <MetadataFile FileName="RegistracijaServis3.xsd" MetadataType="Schema" ID="62db63fa-3a65-4603-91c3-c7a547b47d29" SourceId="1" SourceUrl="http://localhost:49206/RegistracijaServis.svc?xsd=xsd0" />
+    <MetadataFile FileName="RegistracijaServis4.xsd" MetadataType="Schema" ID="f44b7190-f05b-48e3-b4b4-82c7d68ded17" SourceId="1" SourceUrl="http://localhost:49206/RegistracijaServis.svc?xsd=xsd4" />
+    <MetadataFile FileName="RegistracijaServis.wsdl" MetadataType="Wsdl" ID="87317479-e366-4d3d-a786-063ef448d58a" SourceId="1" SourceUrl="http://localhost:49206/RegistracijaServis.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RegistracijaServis.disco" MetadataType="Disco" ID="ebff5460-f851-48eb-ab96-d170c8dd7fa1" SourceId="1" SourceUrl="http://localhost:49206/RegistracijaServis.svc?disco" />
+    <MetadataFile FileName="RegistracijaServis1.wsdl" MetadataType="Wsdl" ID="57a4d939-96e2-4ec5-bbab-1d83317357c7" SourceId="1" SourceUrl="http://localhost:49206/RegistracijaServis.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

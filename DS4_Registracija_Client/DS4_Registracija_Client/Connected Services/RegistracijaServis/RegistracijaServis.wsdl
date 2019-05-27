@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://DS4_Registracija" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://DS4_Registracija" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://DS4_Registracija/Imports">
+      <xsd:import schemaLocation="http://localhost:49206/RegistracijaServis.svc?xsd=xsd0" namespace="http://DS4_Registracija" />
+      <xsd:import schemaLocation="http://localhost:49206/RegistracijaServis.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49206/RegistracijaServis.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DS4_Registracija" />
+      <xsd:import schemaLocation="http://localhost:49206/RegistracijaServis.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+      <xsd:import schemaLocation="http://localhost:49206/RegistracijaServis.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRegistracijaServis_RegistrujVozilo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrujVozilo" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaServis_RegistrujVozilo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrujVoziloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaServis_VratiVozila_InputMessage">
+    <wsdl:part name="parameters" element="tns:VratiVozila" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaServis_VratiVozila_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VratiVozilaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaServis_VratiVlasnike_InputMessage">
+    <wsdl:part name="parameters" element="tns:VratiVlasnike" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaServis_VratiVlasnike_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VratiVlasnikeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaServis_VratiSve_InputMessage">
+    <wsdl:part name="parameters" element="tns:VratiSve" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaServis_VratiSve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VratiSveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistracijaServis_Obavesti_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:Obavesti" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IRegistracijaServis">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RegistrujVozilo">
+      <wsdl:input wsaw:Action="http://DS4_Registracija/IRegistracijaServis/RegistrujVozilo" message="tns:IRegistracijaServis_RegistrujVozilo_InputMessage" />
+      <wsdl:output wsaw:Action="http://DS4_Registracija/IRegistracijaServis/RegistrujVoziloResponse" message="tns:IRegistracijaServis_RegistrujVozilo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="VratiVozila">
+      <wsdl:input wsaw:Action="http://DS4_Registracija/IRegistracijaServis/VratiVozila" message="tns:IRegistracijaServis_VratiVozila_InputMessage" />
+      <wsdl:output wsaw:Action="http://DS4_Registracija/IRegistracijaServis/VratiVozilaResponse" message="tns:IRegistracijaServis_VratiVozila_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="VratiVlasnike">
+      <wsdl:input wsaw:Action="http://DS4_Registracija/IRegistracijaServis/VratiVlasnike" message="tns:IRegistracijaServis_VratiVlasnike_InputMessage" />
+      <wsdl:output wsaw:Action="http://DS4_Registracija/IRegistracijaServis/VratiVlasnikeResponse" message="tns:IRegistracijaServis_VratiVlasnike_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="VratiSve">
+      <wsdl:input wsaw:Action="http://DS4_Registracija/IRegistracijaServis/VratiSve" message="tns:IRegistracijaServis_VratiSve_InputMessage" />
+      <wsdl:output wsaw:Action="http://DS4_Registracija/IRegistracijaServis/VratiSveResponse" message="tns:IRegistracijaServis_VratiSve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Obavesti">
+      <wsdl:output wsaw:Action="http://DS4_Registracija/IRegistracijaServis/Obavesti" message="tns:IRegistracijaServis_Obavesti_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

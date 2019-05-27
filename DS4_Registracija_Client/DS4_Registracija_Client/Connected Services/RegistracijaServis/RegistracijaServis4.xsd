@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49206/RegistracijaServis.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DS4_Registracija" />
+  <xs:complexType name="ArrayOfKeyValueOfVlasnikArrayOfVozilo_S21quIVZ">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfVlasnikArrayOfVozilo_S21quIVZ">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DS4_Registracija" name="Key" nillable="true" type="q1:Vlasnik" />
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DS4_Registracija" name="Value" nillable="true" type="q2:ArrayOfVozilo" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKeyValueOfVlasnikArrayOfVozilo_S21quIVZ" nillable="true" type="tns:ArrayOfKeyValueOfVlasnikArrayOfVozilo_S21quIVZ" />
+</xs:schema>
