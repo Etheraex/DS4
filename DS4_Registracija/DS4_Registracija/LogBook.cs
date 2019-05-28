@@ -105,10 +105,13 @@ namespace DS4_Registracija
 
         public void Dodaj(Vlasnik v, Vozilo z)
         {
-            if(Evidencija.ContainsKey(v))
-                Evidencija[v].Add(z);
-            else
-                Evidencija.Add(v, new List<Vozilo>() { z });
+            foreach(Vlasnik vl in Evidencija.Keys)
+                if(vl.JMBG == v.JMBG)
+                {
+                    Evidencija[vl].Add(z);
+                    return;
+                }
+            Evidencija.Add(v, new List<Vozilo>() { z });
         }
 
         public List<Vlasnik> VratiVlasnike(string model)

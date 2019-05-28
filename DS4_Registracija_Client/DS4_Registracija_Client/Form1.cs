@@ -57,7 +57,7 @@ namespace DS4_Registracija_Client
             var tmp = client.VratiVozila(new RegistracijaServis.Vlasnik() { Ime =ime2.Text, Prezime = prezime2.Text, JMBG = jmbg2.Text });
             foreach (var i in tmp)
                 richTextBox1.AppendText(i.Marka + " " + i.Model + " " + i.Boja + "\n");
-            richTextBox3.AppendText("####################################\n");
+            richTextBox1.AppendText("####################################\n");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -65,12 +65,7 @@ namespace DS4_Registracija_Client
             var tmp = client.VratiVlasnike(textBox1.Text);
             foreach (var v in tmp)
                 richTextBox2.AppendText(v.Ime + " " + v.Prezime + " " + v.JMBG + "\n");
-            richTextBox3.AppendText("####################################\n");
-        }
-
-        public static void ShowMessage(string message)
-        {
-            MessageBox.Show(message);
+            richTextBox2.AppendText("####################################\n");
         }
     }
 }
