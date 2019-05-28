@@ -194,6 +194,12 @@ namespace DS4_Registracija_Client.RegistracijaServis {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://DS4_Registracija/IRegistracijaServis/VratiSve", ReplyAction="http://DS4_Registracija/IRegistracijaServis/VratiSveResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<DS4_Registracija_Client.RegistracijaServis.Vlasnik, DS4_Registracija_Client.RegistracijaServis.Vozilo[]>> VratiSveAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://DS4_Registracija/IRegistracijaServis/Poruka")]
+        void Poruka(string message);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://DS4_Registracija/IRegistracijaServis/Poruka")]
+        System.Threading.Tasks.Task PorukaAsync(string message);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -261,6 +267,14 @@ namespace DS4_Registracija_Client.RegistracijaServis {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<DS4_Registracija_Client.RegistracijaServis.Vlasnik, DS4_Registracija_Client.RegistracijaServis.Vozilo[]>> VratiSveAsync() {
             return base.Channel.VratiSveAsync();
+        }
+        
+        public void Poruka(string message) {
+            base.Channel.Poruka(message);
+        }
+        
+        public System.Threading.Tasks.Task PorukaAsync(string message) {
+            return base.Channel.PorukaAsync(message);
         }
     }
 }

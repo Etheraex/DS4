@@ -67,5 +67,15 @@ namespace DS4_Registracija_Client
                 richTextBox2.AppendText(v.Ime + " " + v.Prezime + " " + v.JMBG + "\n");
             richTextBox2.AppendText("####################################\n");
         }
+
+        public static void ShowMessage(string message)
+        {
+            MessageBox.Show(message);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            client.Poruka(tmp.Text);
+        }
     }
 }

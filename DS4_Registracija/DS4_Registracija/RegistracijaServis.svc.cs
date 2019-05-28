@@ -10,7 +10,7 @@ namespace DS4_Registracija
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
     public class RegistracijaServis : IRegistracijaServis
     {
         public void RegistrujVozilo(Vlasnik v, Vozilo z)
@@ -33,6 +33,11 @@ namespace DS4_Registracija
             return LogBook.LogBookInstance().Evidencija
                                         .Where(x => (x.Key.JMBG == v.JMBG))
                                         .SelectMany(y => y.Value).ToList();
+        }
+
+        public void Poruka(string message)
+        {
+            Callback.Obavesti(message);
         }
 
         IRegistracijaCallback Callback

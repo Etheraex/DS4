@@ -33,6 +33,9 @@
   <wsdl:message name="IRegistracijaServis_VratiSve_OutputMessage">
     <wsdl:part name="parameters" element="tns:VratiSveResponse" />
   </wsdl:message>
+  <wsdl:message name="IRegistracijaServis_Poruka_InputMessage">
+    <wsdl:part name="parameters" element="tns:Poruka" />
+  </wsdl:message>
   <wsdl:message name="IRegistracijaServis_Obavesti_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:Obavesti" />
   </wsdl:message>
@@ -52,6 +55,9 @@
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="VratiSve">
       <wsdl:input wsaw:Action="http://DS4_Registracija/IRegistracijaServis/VratiSve" message="tns:IRegistracijaServis_VratiSve_InputMessage" />
       <wsdl:output wsaw:Action="http://DS4_Registracija/IRegistracijaServis/VratiSveResponse" message="tns:IRegistracijaServis_VratiSve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Poruka">
+      <wsdl:input wsaw:Action="http://DS4_Registracija/IRegistracijaServis/Poruka" message="tns:IRegistracijaServis_Poruka_InputMessage" />
     </wsdl:operation>
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Obavesti">
       <wsdl:output wsaw:Action="http://DS4_Registracija/IRegistracijaServis/Obavesti" message="tns:IRegistracijaServis_Obavesti_OutputCallbackMessage" />

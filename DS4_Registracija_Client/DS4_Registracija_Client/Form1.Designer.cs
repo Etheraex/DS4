@@ -51,6 +51,8 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.tmp = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -237,9 +239,26 @@
             // 
             this.richTextBox3.Location = new System.Drawing.Point(627, 15);
             this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(362, 740);
+            this.richTextBox3.Size = new System.Drawing.Size(362, 681);
             this.richTextBox3.TabIndex = 0;
             this.richTextBox3.Text = "";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(627, 722);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(86, 23);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Poruka callback";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // tmp
+            // 
+            this.tmp.Location = new System.Drawing.Point(719, 725);
+            this.tmp.Name = "tmp";
+            this.tmp.Size = new System.Drawing.Size(100, 20);
+            this.tmp.TabIndex = 2;
             // 
             // Form1
             // 
@@ -259,10 +278,12 @@
             this.Controls.Add(this.prezime);
             this.Controls.Add(this.jmbg2);
             this.Controls.Add(this.jmbg);
+            this.Controls.Add(this.tmp);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ime2);
             this.Controls.Add(this.ime);
             this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -301,6 +322,8 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox tmp;
     }
 }
 

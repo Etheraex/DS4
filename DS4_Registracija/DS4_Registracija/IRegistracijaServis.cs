@@ -24,6 +24,9 @@ namespace DS4_Registracija
 
         [OperationContract]
         Dictionary<Vlasnik, List<Vozilo>> VratiSve();
+
+        [OperationContract(IsOneWay = true)]
+        void Poruka(string message);
         // TODO: Add your service operations here
     }
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
