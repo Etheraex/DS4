@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="747f79f0-9c6c-4687-a08d-cef40bdf26f3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51548/AudicijaServis.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AudicijaServis.xsd" MetadataType="Schema" ID="65df5099-dc40-4db3-9301-dab41791f6d1" SourceId="1" SourceUrl="http://localhost:51548/AudicijaServis.svc?xsd=xsd2" />
+    <MetadataFile FileName="AudicijaServis1.xsd" MetadataType="Schema" ID="21453c63-5c59-4f4e-ba6c-95bfd3758abf" SourceId="1" SourceUrl="http://localhost:51548/AudicijaServis.svc?xsd=xsd1" />
+    <MetadataFile FileName="AudicijaServis2.xsd" MetadataType="Schema" ID="cf8cfddc-783e-4f28-9616-9bb066f4d567" SourceId="1" SourceUrl="http://localhost:51548/AudicijaServis.svc?xsd=xsd0" />
+    <MetadataFile FileName="AudicijaServis.disco" MetadataType="Disco" ID="710d6e7a-1344-41ec-b15e-784c29a1c5a8" SourceId="1" SourceUrl="http://localhost:51548/AudicijaServis.svc?disco" />
+    <MetadataFile FileName="AudicijaServis.wsdl" MetadataType="Wsdl" ID="59076809-3c98-4a1b-864f-88c9a69118bc" SourceId="1" SourceUrl="http://localhost:51548/AudicijaServis.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
